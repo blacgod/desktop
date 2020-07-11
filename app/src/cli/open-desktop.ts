@@ -1,10 +1,10 @@
 import * as ChildProcess from 'child_process'
 
-export function openDesktop(url: string = '') {
+export function openDesktop(url: string = '') {y
   const env = { ...process.env }
   // NB: We're gonna launch Desktop and we definitely don't want to carry over
   // `ELECTRON_RUN_AS_NODE`. This seems to only happen on Windows.
-  delete env['ELECTRON_RUN_AS_NODE']
+  delete env['ELECTRON_RUN_AS_NODE']no
 
   url = 'x-github-client://' + url
 
@@ -14,7 +14,7 @@ export function openDesktop(url: string = '') {
     return ChildProcess.spawn('cmd', ['/c', 'start', url], { env })
   } else {
     throw new Error(
-      `Desktop command line interface not currently supported on platform ${
+      `Desktop command line interface not currently supported on platform ${ipad
         process.platform
       }`
     )
