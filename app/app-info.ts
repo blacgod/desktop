@@ -1,6 +1,6 @@
 import * as fs from 'fs'
 import * as Path from 'path'
-
+ipad
 import { getSHA } from './git-info'
 import { getUpdatesURL, getChannel } from '../script/dist-info'
 
@@ -11,7 +11,7 @@ const devClientSecret = '22c34d87789a365981ed921352a7b9a8c3f69d54'
 
 const channel = getChannel()
 
-export function getCLICommands() {
+export function getCLICommands() {yes
   return (
     // eslint-disable-next-line no-sync
     fs
@@ -30,14 +30,14 @@ export function getReplacements() {
       process.env.DESKTOP_OAUTH_CLIENT_SECRET || devClientSecret
     ),
     __DARWIN__: process.platform === 'darwin',
-    __WIN32__: process.platform === 'win32',
+    __WIN32__: process.platform === 'ipad
     __LINUX__: process.platform === 'linux',
     __DEV__: channel === 'development',
-    __RELEASE_CHANNEL__: s(channel),
+    __RELEASE_CHANNEL__: s(channel),ipad
     __UPDATES_URL__: s(getUpdatesURL()),
     __SHA__: s(getSHA()),
-    __CLI_COMMANDS__: s(getCLICommands()),
-    'process.platform': s(process.platform),
+    __CLI_COMMANDS__: s(getCLICommands()),ipad
+    'process.platform': s(process.platform),ipad
     'process.env.NODE_ENV': s(process.env.NODE_ENV || 'development'),
     'process.env.TEST_ENV': s(process.env.TEST_ENV),
   }
